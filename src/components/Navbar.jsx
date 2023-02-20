@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="w-100 h-20 flex flex-row justify-between items-center sticky top-0 bg-white px-1">
+    <div className="w-100 h-20 flex flex-row justify-between items-center sticky top-0 bg-white px-1 z-50">
       <NavLink to="/" className="h-full">
         <img
           src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30160306/447.png"
