@@ -6,7 +6,7 @@ function Carousel() {
 
   return (
     <div className="w-full flex flex-col mb-10">
-      <div className="w-full h-80 relative">
+      <div className="w-full h-96 relative">
         <div className="w-full h-full absolute top-0  z-20 bg-black  opacity-30"></div>
         <div className="h-full absolute top-5 left-20 z-30 bg-green-500 w-72"></div>
         <img src={`${current}.jpg`} className="w-full h-full bg-cover z-10 " />
