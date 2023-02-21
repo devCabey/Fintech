@@ -3,26 +3,19 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="w-100 h-20 flex flex-row justify-between items-center sticky top-0 bg-white px-1 z-50">
-      <NavLink to="/" className="h-full">
-        <img
-          src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30160306/447.png"
-          alt="logo"
-          className="h-full w-44"
-        />
-      </NavLink>
-
-      <ul className="flex flex-row justify-between w-1/3 text-sm font-light text-gray-600 ">
+    <div className="w-100 h-14 flex flex-row md:justify-between  justify-center items-end sticky top-0 bg-gray-200 px-1  z-50 mb-2">
+      
+      <ul className="flex flex-row justify-between  text-sm font-light text-gray-600 mb-2">
         <li className="h-full ">
           <NavLink
             className={({ isActive }) =>
               `${
                 isActive ? "border-b-2 " : ""
-              }border-blue-700 pb-2 px-1  hover:border-b-2 `
+              }border-[#6e0802] pb-2 px-1 mx-2  hover:border-b-2 `
             }
-            to="about"
+            to="checking"
           >
-            Who We Are
+            Checking
           </NavLink>
         </li>
         <li>
@@ -30,11 +23,11 @@ function Navbar() {
             className={({ isActive }) =>
               `${
                 isActive ? "border-b-2" : ""
-              }  hover:border-b-2 border-blue-700  pb-2 px-1`
+              }  hover:border-b-2 border-[#6e0802]  pb-2 px-1 mx-2`
             }
-            to="news"
+            to="saving"
           >
-            News & Stories
+            Savings
           </NavLink>
         </li>
         <li>
@@ -42,11 +35,11 @@ function Navbar() {
             className={({ isActive }) =>
               `${
                 isActive ? "border-b-2" : ""
-              } hover:border-b-2 border-blue-700  pb-2 px-1`
+              } hover:border-b-2 border-[#6e0802]  pb-2 px-1 mx-2`
             }
-            to="impact"
+            to="credit_card"
           >
-            Impact
+            Credit Cards
           </NavLink>
         </li>
         <li>
@@ -54,11 +47,11 @@ function Navbar() {
             className={({ isActive }) =>
               `${
                 isActive ? "border-b-2" : ""
-              }  hover:border-b-2 border-blue-700  pb-2 px-1`
+              }  hover:border-b-2 border-[#6e0802]  pb-2 px-1 mx-2`
             }
-            to="institute"
+            to="merchant"
           >
-            Institute
+            Merchant Services
           </NavLink>
         </li>
         <li>
@@ -66,11 +59,11 @@ function Navbar() {
             className={({ isActive }) =>
               `${
                 isActive ? "border-b-2" : ""
-              } hover:border-b-2 border-blue-700  pb-2 px-1`
+              } hover:border-b-2 border-[#6e0802]  pb-2 px-1 mx-2`
             }
-            to="investor"
+            to="loan"
           >
-            Investors
+            Loans
           </NavLink>
         </li>
         <li>
@@ -78,14 +71,15 @@ function Navbar() {
             className={({ isActive }) =>
               `${
                 isActive ? "border-b-2" : ""
-              } hover:border-b-2 border-blue-700  pb-2 px-1`
+              } hover:border-b-2 border-[#6e0802]  pb-2 px-1 mx-2`
             }
-            to="career"
+            to="commercial_banking"
           >
-            Careers
+            Commercial Banking
           </NavLink>
         </li>
       </ul>
+      <span></span>
     </div>
   );
 }

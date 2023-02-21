@@ -8,6 +8,12 @@ import Impact from "./pages/Impact";
 import Institute from "./pages/Institute";
 import Investor from "./pages/Investor";
 import Career from "./pages/Career";
+import Commercial from "./pages/Commercial";
+import Merchant from "./pages/Merchant";
+import Saving from "./pages/Saving";
+import Checking from "./pages/Checking";
+import Credit from "./pages/Credit";
+import Loan from "./pages/Loan";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +48,30 @@ const router = createBrowserRouter([
       {
         path: "/career",
         element: <Career />,
+      },
+      {
+        path: "/credit_card",
+        element: <Credit />,
+      },
+      {
+        path: "/commercial_banking",
+        element: <Commercial />,
+      },
+      {
+        path: "/merchant",
+        element: <Merchant />,
+      },
+      {
+        path: "/saving",
+        element: <Saving />,
+      },
+      {
+        path: "/checking",
+        element: <Checking />,
+      },
+      {
+        path: "/loan",
+        element: <Loan />,
       },
     ],
   },
