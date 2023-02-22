@@ -6,10 +6,10 @@ import Footer from "../components/Footer";
 function HomeLayout() {
   return (
     <div className=" w-full">
-      <div className="w-full h-20 bg-[#6e0802] flex flex-row justify-between  items-end md:px-5 border-b">
-        <NavLink to="/" className="h-full">
+      <div className="w-full h-20 bg-[#f5726b] flex flex-row justify-between  items-end md:px-5 border-b">
+        <NavLink to="/" className="h-16">
           <img
-            src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30160306/447.png"
+            src="https://cdn.freebiesupply.com/logos/large/2x/union-bank-logo-png-transparent.png"
             alt="logo"
             className="h-full w-44"
           />
