@@ -6,12 +6,12 @@ import Footer from "../components/Footer";
 function HomeLayout() {
   return (
     <div className=" w-full">
-      <div className="w-full h-20 bg-[#f5726b] flex flex-row justify-between  items-end md:px-5 border-b">
+      <div className="w-full h-16 bg-[#f5726b] flex flex-row justify-between  items-end md:px-5 border-b">
         <NavLink to="/" className="h-16">
           <img
             src="https://cdn.freebiesupply.com/logos/large/2x/union-bank-logo-png-transparent.png"
             alt="logo"
-            className="h-full w-44"
+            className="h-full "
           />
         </NavLink>
         <ul className="flex flex-row justify-between w-1/3 text-sm font-light text-white mb-3">
