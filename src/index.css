@@ -4,9 +4,12 @@
 
 @layer components {
   .footer_item {
-    @apply font-thin text-sm border-l pl-3;
+    @apply font-thin text-sm md:border-l pl-3;
   }
   .footer_head {
-    @apply font-semibold text-lg mb-5;
+    @apply font-semibold text-lg md:mb-5;
+  }
+  .footer_data {
+    @apply w-full;
   }
 }
