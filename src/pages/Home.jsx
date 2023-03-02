@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className=" w-full">
       <div className="relative">
-        <div className="w-full sm:h-[500px]">
+        <div className="w-full sm:h-[500px] mt-5 md:mt-0">
           <img
             src="https://www17.wellsfargomedia.com/assets/images/contextual/responsive/hpprimary/adobestock_177573783_hl_hppb_1700x700.jpg"
             alt=""
@@ -16,7 +16,7 @@ function Home() {
           />
         </div>
 
-        <div className="flex flex-row absolute left-10 top-10 ">
+        <div className="flex flex-row absolute md:left-10 md:top-10 ">
           <div className="bg-white rounded-lg w-80 h-[350px] shadow-md shadow-gray-400 p-5 hidden md:block">
             <div>
               <h3 className="text-2xl ">Good morning</h3>
@@ -53,13 +53,25 @@ function Home() {
           </div>
           <div className="ml-10 h-[350px] md:flex flex-col justify-center hidden">
             <h1 className="text-6xl font-light">
-              $0 has never felt like so <br /> much
+              $0 has never felt like so <br className="hidden" /> much
             </h1>
-            <h6 className="my-5 text-2xl ">$0 online trades with Bank Mega</h6>
+            <h6 className="my-5 text-xl xl:text-2xl ">
+              $0 online trades with Bank Mega
+            </h6>
             <span className="w-56 border border-gray-700 text-center py-2 rounded-full text-lg hover:bg-black hover:text-white cursor-pointer">
               Take Control
             </span>
           </div>
+        </div>
+      </div>
+
+      <div className="my-5 flex md:hidden flex-col justify-center items-center">
+        <h1 className="text-2xl text-center">$0 has never felt like so much</h1>
+        <h6 className="my-5 text-sm font-light text-center">
+          $0 online trades with Bank Mega
+        </h6>
+        <div className="m-auto border border-gray-700 text-center py-2 px-3 rounded-full text-xs hover:bg-black hover:text-white cursor-pointer">
+          Take Control
         </div>
       </div>
 
