@@ -39,7 +39,7 @@ function Footer() {
       </div>
       <div className="w-full md:w-5/6 md:m-auto flex flex-col items-center justify-center">
         <img
-          src="https://cdn.freebiesupply.com/logos/large/2x/union-bank-logo-png-transparent.png"
+          src="https://logos-download.com/wp-content/uploads/2016/06/Yes_Bank_logo.png"
           alt="logo"
           className="md:h-24 md:w-56 m-4"
         />
