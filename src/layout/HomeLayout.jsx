@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { FiMenu } from "react-icons/fi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 function HomeLayout() {
@@ -12,7 +12,7 @@ function HomeLayout() {
     <div className=" w-full relative">
       {/* Nav */}
       <div
-        className={`absolute top-0 h-[700px] right-0 w-full sm:w-80 bg-white opacity-90  z-50 ${
+        className={`absolute top-0  h-[700px] right-0 w-full sm:w-80 bg-white opacity-90  z-50 md:hidden ${
           sideNav ? "flex" : "hidden"
         }`}
       >
@@ -25,21 +25,25 @@ function HomeLayout() {
           </div>
           <div>
             <ul>
-              <li>Who we are </li>
+              <li>
+                <Link>Who we are </Link>
+              </li>
               <li>Career</li>
               <li>Legal</li>
               <li>Vault</li>
               <li>Bank</li>
-              <li>Join us</li>
+              <li>
+                <Link to="join-us">Join us</Link>
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div className="w-full h-10 md:h-16 bg-[#f5726b] flex flex-row justify-between  items-end md:px-5 border-b">
+      <div className="sticky top-0 w-full h-10 md:h-16 bg-[#f5726b] flex flex-row justify-between  items-end md:px-5 border-b z-40">
         <NavLink to="/" className="h-10 md:h-16 mx-5">
           <img
-            src="https://logos-download.com/wp-content/uploads/2016/06/Yes_Bank_logo.png"
+            src="https://www.pngarts.com/files/3/Logo-PNG-Download-Image.png"
             alt="logo"
             className="h-full "
           />
@@ -85,7 +89,7 @@ function HomeLayout() {
                   isActive ? "border-b-8" : ""
                 } hover:border-b-2 border-gray-300  pb-2 px-1`
               }
-              to="impact"
+              to="join-us"
             >
               Join Us
             </NavLink>

@@ -3,17 +3,11 @@ import Home from "./pages/Home";
 import HomeLayout from "./layout/HomeLayout";
 import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
-import News from "./pages/News";
-import Impact from "./pages/Impact";
-import Institute from "./pages/Institute";
-import Investor from "./pages/Investor";
-import Career from "./pages/Career";
-import Commercial from "./pages/Commercial";
-import Merchant from "./pages/Merchant";
-import Saving from "./pages/Saving";
-import Checking from "./pages/Checking";
-import Credit from "./pages/Credit";
-import Loan from "./pages/Loan";
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
+import DashboardLayout from "./layout/DashboardLayout";
+import Bank from "./pages/Bank";
+import Vault from "./pages/Vault";
 
 const router = createBrowserRouter([
   {
@@ -29,51 +23,33 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
+    ],
+  },
+  {
+    path: "/user",
+    element: <DashboardLayout />,
+    children: [
       {
-        path: "/news",
-        element: <News />,
+        path: "user",
+        element: <Dashboard />,
       },
       {
-        path: "/impact",
-        element: <Impact />,
+        path: "bank",
+        element: <Bank />,
       },
       {
-        path: "/institute",
-        element: <Institute />,
+        path: "vault",
+        element: <Vault />,
       },
       {
-        path: "/investor",
-        element: <Investor />,
-      },
-      {
-        path: "/career",
-        element: <Career />,
-      },
-      {
-        path: "/credit_card",
-        element: <Credit />,
-      },
-      {
-        path: "/commercial_banking",
-        element: <Commercial />,
-      },
-      {
-        path: "/merchant",
-        element: <Merchant />,
-      },
-      {
-        path: "/saving",
-        element: <Saving />,
-      },
-      {
-        path: "/checking",
-        element: <Checking />,
-      },
-      {
-        path: "/loan",
-        element: <Loan />,
+        path: "vault",
+        element: <Vault />,
       },
     ],
+  },
+  {
+    path: "/join-us",
+    element: <Signup />,
   },
 ]);
 

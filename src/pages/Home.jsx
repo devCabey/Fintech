@@ -3,53 +3,23 @@ import React from "react";
 import HomeCard from "../components/HomeCard";
 import FinancialCard from "../components/FinancialCard";
 import ServiceCard from "../components/ServiceCard";
+import LoginComponent from "../components/LoginComponent";
 
 function Home() {
   return (
-    <div className=" w-full">
-      <div className="relative">
-        <div className="w-full sm:h-[500px] mt-5 md:mt-0">
+    <div className=" w-full ">
+      <div className="relative top-0 z-20">
+        <div className="w-full sm:h-[500px] mt-5 md:mt-0 ">
           <img
             src="https://www17.wellsfargomedia.com/assets/images/contextual/responsive/hpprimary/adobestock_177573783_hl_hppb_1700x700.jpg"
             alt=""
-            className="w-full h-full"
+            className="w-full h-full z-20"
           />
         </div>
 
         <div className="flex flex-row absolute md:left-10 md:top-10 ">
-          <div className="bg-white rounded-lg w-80 h-[350px] shadow-md shadow-gray-400 p-5 hidden md:block">
-            <div>
-              <h3 className="text-2xl ">Good morning</h3>
-              <h6 className="text-gray-400 text-sm font-light">
-                Sign on to manage your accounts.
-              </h6>
-            </div>
-            <div>
-              <div className="hover:border hover:border-red-700 hover:border-b-2 h-12 flex flex-col  px-4 rounded-md hover:shadow-sm shadow-red-600 mt-5 border-b border-gray-500">
-                <span className="text-xs text-gray-500">Username</span>
-                <input
-                  type="text"
-                  placeholder="example@mail.com"
-                  className="bg-transparent flex-1 outline-none text-gray-700 "
-                />
-              </div>
-              <div className="hover:border hover:border-red-700 hover:border-b-2 h-12 flex flex-col  px-4 rounded-md hover:shadow-sm shadow-red-600 mt-5 border-b border-gray-500">
-                <span className="text-xs text-gray-500 ">Password</span>
-                <input
-                  type="password"
-                  placeholder="**********"
-                  className="bg-transparent flex-1 outline-none text-gray-700 "
-                />
-              </div>
-            </div>
-            <div className="my-5 flex flex-row justify-between ">
-              <span className="cursor-pointer px-4 py-2 border-b rounded-full text-sm border-red-800 hover:bg-red-800 hover:text-white font-light">
-                Sign on
-              </span>
-              <span className="cursor-pointer px-4 py-2 border-b rounded-full text-sm border-red-800 hover:bg-red-800 hover:text-white font-light">
-                Enroll now
-              </span>
-            </div>
+          <div className="w-80 hidden md:block">
+            <LoginComponent />
           </div>
           <div className="ml-10 h-[350px] md:flex flex-col justify-center hidden">
             <h1 className="text-6xl font-light">
