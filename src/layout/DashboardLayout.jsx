@@ -45,7 +45,7 @@ function DashboardLayout() {
         <div className="w-64 mr-5  h-full bg-white pt-10  ">
           <ul className="w-full  ">
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <NavLink className="w-full flex justify-center" to="/user">
+              <NavLink className="w-full flex justify-center h-full" to="/user">
                 <div className="w-32 flex justify-start  items-center">
                   <CiHome className="w-5 h-5 mr-2" />
                   <h1 className="text-sm font-medium"> Home</h1>
@@ -53,7 +53,7 @@ function DashboardLayout() {
               </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <NavLink className="w-full flex justify-center" to="bank">
+              <NavLink className="w-full flex justify-center h-full" to="bank">
                 <div className="w-32 flex justify-start  items-center">
                   <CiBank className="w-5 h-5 mr-2" />
                   <h1 className="text-sm font-medium"> Bank</h1>
@@ -61,7 +61,7 @@ function DashboardLayout() {
               </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <NavLink className="w-full flex justify-center" to="vault">
+              <NavLink className="w-full flex justify-center h-full" to="vault">
                 <div className="w-32 flex justify-start  items-center">
                   <CiVault className="w-5 h-5 mr-2" />
                   <h1 className="text-sm font-medium"> Vault</h1>
@@ -69,7 +69,10 @@ function DashboardLayout() {
               </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <NavLink className="w-full flex justify-center" to="transaction">
+              <NavLink
+                className="w-full flex justify-center h-full"
+                to="transaction"
+              >
                 <div className="w-32 flex justify-start  items-center">
                   <CiLink className="w-5 h-5 mr-2" />
                   <h1 className="text-sm font-medium"> Transactions </h1>
@@ -78,7 +81,10 @@ function DashboardLayout() {
             </li>
 
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <NavLink className="w-full flex justify-center" to="setting">
+              <NavLink
+                className="w-full flex justify-center h-full"
+                to="setting"
+              >
                 <div className="w-32 flex justify-start  items-center">
                   <CiSettings className="w-5 h-5 mr-2" />
                   <h1 className="text-sm font-medium"> Settings</h1>
@@ -86,7 +92,10 @@ function DashboardLayout() {
               </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <NavLink className="w-full flex justify-center" to="support">
+              <NavLink
+                className="w-full flex justify-center h-full"
+                to="support"
+              >
                 <div className="w-32 flex justify-start  items-center">
                   <CiDesktop className="w-5 h-5 mr-2" />
                   <h1 className="text-sm font-medium"> Support</h1>

@@ -100,24 +100,6 @@ function Row(props) {
   );
 }
 
-Row.propTypes = {
-  row: PropTypes.shape({
-    calories: PropTypes.number.isRequired,
-    carbs: PropTypes.number.isRequired,
-    fat: PropTypes.number.isRequired,
-    history: PropTypes.arrayOf(
-      PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        customerId: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-      })
-    ).isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    protein: PropTypes.number.isRequired,
-  }).isRequired,
-};
-
 const rows = [
   createData("Frozen yoghurt", 159, 6.0, 24, 4.0, 3.99),
   createData("Ice cream sandwich", 237, 9.0, 37, 4.3, 4.99),
@@ -129,7 +111,9 @@ const rows = [
 function Transaction() {
   return (
     <div className="w-full ">
-      <div></div>
+      <div className="mb-6">
+        <h1 className="text-3xl">Transactions</h1>
+      </div>
       <div>
         <TableContainer component={Paper}>
           <Table aria-label="collapsible table">

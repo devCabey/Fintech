@@ -4,6 +4,7 @@ import { AiFillCreditCard, AiOutlineTransaction } from "react-icons/ai";
 import { SiVault } from "react-icons/si";
 import { RiLuggageDepositFill } from "react-icons/ri";
 import TransactionTable from "../components/TransactionTable";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -62,9 +63,12 @@ function Dashboard() {
           <h1 className="text-lg font-normal">Transactions</h1>{" "}
           <span className="border-b w-5 mx-1 border-gray-500"></span>
         </div>
-        <span className="px-3 py-2  text-white bg-black mt-5 text-xs mr-2 cursor-pointer">
+        <Link
+          to="transaction"
+          className="px-3 py-2  text-white bg-black mt-5 text-xs mr-2 cursor-pointer"
+        >
           View All
-        </span>
+        </Link>
       </div>
       <div className="w-full mb-10 mx-5">
         <TransactionTable />
