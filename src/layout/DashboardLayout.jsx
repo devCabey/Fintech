@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TfiEmail } from "react-icons/tfi";
 import {
   CiBank,
@@ -8,11 +8,13 @@ import {
   CiLink,
   CiDesktop,
 } from "react-icons/ci";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import Dashboard from "../pages/Dashboard";
 
 function DashboardLayout() {
+  const location = useLocation();
   return (
-    <div className="relative w-full bg-gray-50">
+    <div className="relative w-full">
       {/* Top Nav */}
       <div className="w-full h-16  px-5 flex justify-between  bg-white">
         <div className=" h-full w-48 flex justify-center items-center">
@@ -43,47 +45,60 @@ function DashboardLayout() {
         <div className="w-64 mr-5  h-full bg-white pt-10  ">
           <ul className="w-full  ">
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <div className="w-32 flex justify-start  items-center">
-                <CiHome className="w-5 h-5 mr-2" />
-                <h1 className="text-sm font-medium"> Home</h1>
-              </div>
+              <NavLink className="w-full flex justify-center" to="/user">
+                <div className="w-32 flex justify-start  items-center">
+                  <CiHome className="w-5 h-5 mr-2" />
+                  <h1 className="text-sm font-medium"> Home</h1>
+                </div>
+              </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <div className="w-32 flex justify-start  items-center">
-                <CiBank className="w-5 h-5 mr-2" />
-                <h1 className="text-sm font-medium"> Bank</h1>
-              </div>
+              <NavLink className="w-full flex justify-center" to="bank">
+                <div className="w-32 flex justify-start  items-center">
+                  <CiBank className="w-5 h-5 mr-2" />
+                  <h1 className="text-sm font-medium"> Bank</h1>
+                </div>
+              </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <div className="w-32 flex justify-start  items-center">
-                <CiVault className="w-5 h-5 mr-2" />
-                <h1 className="text-sm font-medium"> Vault</h1>
-              </div>
+              <NavLink className="w-full flex justify-center" to="vault">
+                <div className="w-32 flex justify-start  items-center">
+                  <CiVault className="w-5 h-5 mr-2" />
+                  <h1 className="text-sm font-medium"> Vault</h1>
+                </div>
+              </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <div className="w-32 flex justify-start  items-center">
-                <CiLink className="w-5 h-5 mr-2" />
-                <h1 className="text-sm font-medium"> Transactions </h1>
-              </div>
+              <NavLink className="w-full flex justify-center" to="transaction">
+                <div className="w-32 flex justify-start  items-center">
+                  <CiLink className="w-5 h-5 mr-2" />
+                  <h1 className="text-sm font-medium"> Transactions </h1>
+                </div>
+              </NavLink>
+            </li>
+
+            <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
+              <NavLink className="w-full flex justify-center" to="setting">
+                <div className="w-32 flex justify-start  items-center">
+                  <CiSettings className="w-5 h-5 mr-2" />
+                  <h1 className="text-sm font-medium"> Settings</h1>
+                </div>
+              </NavLink>
             </li>
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <div className="w-32 flex justify-start  items-center">
-                <CiSettings className="w-5 h-5 mr-2" />
-                <h1 className="text-sm font-medium"> Settings</h1>
-              </div>
-            </li>
-            <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
-              <div className="w-32 flex justify-start  items-center">
-                <CiDesktop className="w-5 h-5 mr-2" />
-                <h1 className="text-sm font-medium"> Support</h1>
-              </div>
+              <NavLink className="w-full flex justify-center" to="support">
+                <div className="w-32 flex justify-start  items-center">
+                  <CiDesktop className="w-5 h-5 mr-2" />
+                  <h1 className="text-sm font-medium"> Support</h1>
+                </div>
+              </NavLink>
             </li>
           </ul>
         </div>
-        <div className="flex-1  mt-10">
+        <div className="flex-1  pt-10 px-5 bg-gray-50">
           {/* Outlet */}
-          <div className="w-full h-full">
-            <Outlet />
+          <div className="w-11/12 h-full ">
+            {location.pathname === "/user" ? <Dashboard /> : <Outlet />}
           </div>
         </div>
       </div>

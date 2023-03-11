@@ -96,8 +96,8 @@ function HomeLayout() {
           </li>
         </ul>
       </div>
-      <div className="w-5/6 m-auto ">
-        <Navbar />
+      <div className="w-5/6 m-auto mt-5 ">
+        {/* <Navbar /> */}
         <Outlet />
       </div>
       <Footer />

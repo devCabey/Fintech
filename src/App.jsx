@@ -4,10 +4,12 @@ import HomeLayout from "./layout/HomeLayout";
 import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
 import Signup from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
 import DashboardLayout from "./layout/DashboardLayout";
 import Bank from "./pages/Bank";
 import Vault from "./pages/Vault";
+import Transaction from "./pages/Transaction";
+import Setting from "./pages/Setting";
+import Support from "./pages/Support";
 
 const router = createBrowserRouter([
   {
@@ -30,10 +32,6 @@ const router = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       {
-        path: "user",
-        element: <Dashboard />,
-      },
-      {
         path: "bank",
         element: <Bank />,
       },
@@ -42,8 +40,16 @@ const router = createBrowserRouter([
         element: <Vault />,
       },
       {
-        path: "vault",
-        element: <Vault />,
+        path: "transaction",
+        element: <Transaction />,
+      },
+      {
+        path: "setting",
+        element: <Setting />,
+      },
+      {
+        path: "support",
+        element: <Support />,
       },
     ],
   },
