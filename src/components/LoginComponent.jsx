@@ -31,7 +31,7 @@ function LoginComponent() {
       <div className="my-5 flex flex-row justify-between ">
         <span />
         <span className="cursor-pointer px-4 py-2 border-b rounded-full text-sm border-red-800 hover:bg-red-800 hover:text-white font-light">
-          <Link to="user">Sign on</Link>
+          <Link to="/user">Sign on</Link>
         </span>
         {/* <span className="cursor-pointer px-4 py-2 border-b rounded-full text-sm border-red-800 hover:bg-red-800 hover:text-white font-light">
           Enroll now

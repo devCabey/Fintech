@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { TfiEmail } from "react-icons/tfi";
 import {
   CiBank,
@@ -16,7 +16,7 @@ function DashboardLayout() {
   return (
     <div className="relative w-full">
       {/* Top Nav */}
-      <div className="w-full h-16  px-5 flex justify-between  bg-white">
+      <div className="w-full h-16  px-5 flex justify-between  bg-white sticky top-0">
         <div className=" h-full w-48 flex justify-center items-center">
           <img
             src="https://www.pngarts.com/files/3/Logo-PNG-Download-Image.png"
@@ -42,7 +42,7 @@ function DashboardLayout() {
       {/* Content */}
       <div className=" w-full flex flex-1 ">
         {/* SideNav */}
-        <div className="w-64 mr-5  h-full bg-white pt-10  ">
+        <div className="w-64 mr-5  h-full bg-white pt-10  sticky top-20">
           <ul className="w-full  ">
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
               <NavLink className="w-full flex justify-center h-full" to="/user">
