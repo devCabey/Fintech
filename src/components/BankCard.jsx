@@ -1,10 +1,14 @@
 import React from "react";
 import { FcSimCardChip } from "react-icons/fc";
+import { RiMastercardFill } from "react-icons/ri";
 function BankCard({ type, balance, number, date, name }) {
   return (
     <div className="gradient_color w-3/5 h-80 mx-10 rounded-lg p-7">
       <div className="flex justify-end items-center">
-        <h1 className="text-lg mb-3">{type}</h1>
+        <h1 className="text-sm mb-3 font-medium text-slate-600">
+          <RiMastercardFill className="text-slate-500" />
+          {type}
+        </h1>
       </div>
       <div className="my-5">
         <h1 className="text-xs font-light">Available Balance</h1>

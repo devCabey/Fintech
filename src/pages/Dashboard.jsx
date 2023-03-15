@@ -20,7 +20,7 @@ function Dashboard() {
           <span className="border px-3 py-2 mx-2 text-xs border-gray-600 cursor-pointer">
             Send Money
           </span>
-          <span className="border px-3 py-2 mx-2 text-xs bg-[#2dfcd0] cursor-pointer border-gray-600">
+          <span className="border px-3 py-2 mx-2 text-xs bg-green-300 cursor-pointer border-gray-600">
             Check Account
           </span>
         </div>

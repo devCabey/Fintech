@@ -35,8 +35,8 @@ function Bank() {
           name="Caleb Lord"
         />
       </div>
-      <div className="my-6">
-        <h1 className="text-2xl font-bold ">My Cards</h1>
+      <div className="my-10">
+        <h1 className="text-xl font-medium ml-6">My Cards</h1>
       </div>
       <div className="flex justify-center items-center">
         <BankCard
