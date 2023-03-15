@@ -112,7 +112,7 @@ function Transaction() {
   return (
     <div className="w-full ">
       <div className="mb-6">
-        <h1 className="text-3xl">Transactions</h1>
+        <h1 className="text-2xl font-bold">Transactions</h1>
       </div>
       <div>
         <TableContainer component={Paper}>

@@ -12,4 +12,8 @@
   .footer_data {
     @apply w-full;
   }
+  .gradient_color {
+    background: #121212;
+    background: linear-gradient(to left, #f5f3f2, #fcd2b1, #fc9003);
+  }
 }
