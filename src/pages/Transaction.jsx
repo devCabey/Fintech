@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { GiReceiveMoney, GiPayMoney } from "react-icons/gi";
 import Box from "@mui/material/Box";
 import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
@@ -14,24 +14,17 @@ import Paper from "@mui/material/Paper";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-function createData(name, calories, fat, carbs, protein, price) {
+function createData(transType, transID, transAmount) {
   return {
-    name,
-    calories,
-    fat,
-    carbs,
-    protein,
-    price,
+    transType,
+    transID,
+    transAmount,
     history: [
       {
         date: "2020-01-05",
-        customerId: "11091700",
-        amount: 3,
-      },
-      {
-        date: "2020-01-02",
-        customerId: "Anonymous",
-        amount: 1,
+        withdraw: "-",
+        deposit: "50,000",
+        balance: "120,000",
       },
     ],
   };
@@ -54,27 +47,35 @@ function Row(props) {
           </IconButton>
         </TableCell>
         <TableCell component="th" scope="row">
-          {row.name}
+          {row.transType == "Deposit" ? (
+            <span className="flex items-center">
+              <GiPayMoney className="text-green-500" />
+              <h6 className="ml-2 text-green-500">Deposit</h6>
+            </span>
+          ) : (
+            <span className="flex items-center">
+              <GiReceiveMoney className="text-blue-500" />
+              <h6 className="ml-2 text-blue-500">Withdraw</h6>
+            </span>
+          )}
         </TableCell>
-        <TableCell align="right">{row.calories}</TableCell>
-        <TableCell align="right">{row.fat}</TableCell>
-        <TableCell align="right">{row.carbs}</TableCell>
-        <TableCell align="right">{row.protein}</TableCell>
+        <TableCell align="right">{row.transID}</TableCell>
+        <TableCell align="right">{row.transAmount}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
-                History
+                Details
               </Typography>
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Customer</TableCell>
-                    <TableCell align="right">Amount</TableCell>
-                    <TableCell align="right">Total price ($)</TableCell>
+                    <TableCell>Transfer Date</TableCell>
+                    <TableCell>Withdraw&nbsp;($)</TableCell>
+                    <TableCell align="right">Deposit&nbsp;($)</TableCell>
+                    <TableCell align="right">Balance&nbsp;($)</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -83,11 +84,9 @@ function Row(props) {
                       <TableCell component="th" scope="row">
                         {historyRow.date}
                       </TableCell>
-                      <TableCell>{historyRow.customerId}</TableCell>
-                      <TableCell align="right">{historyRow.amount}</TableCell>
-                      <TableCell align="right">
-                        {Math.round(historyRow.amount * row.price * 100) / 100}
-                      </TableCell>
+                      <TableCell>{historyRow.withdraw}</TableCell>
+                      <TableCell align="right">{historyRow.deposit}</TableCell>
+                      <TableCell align="right">{historyRow.balance}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -100,13 +99,7 @@ function Row(props) {
   );
 }
 
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0, 3.99),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3, 4.99),
-  createData("Eclair", 262, 16.0, 24, 6.0, 3.79),
-  createData("Cupcake", 305, 3.7, 67, 4.3, 2.5),
-  createData("Gingerbread", 356, 16.0, 49, 3.9, 1.5),
-];
+const rows = [createData("Deposit", "sdf98sf329", "50,000")];
 
 function Transaction() {
   return (
@@ -120,16 +113,14 @@ function Transaction() {
             <TableHead>
               <TableRow>
                 <TableCell />
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                <TableCell>Transaction Type</TableCell>
+                <TableCell align="right">Transaction ID</TableCell>
+                <TableCell align="right">Amount&nbsp;($)</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <Row key={row.name} row={row} />
+                <Row key={row.transID} row={row} />
               ))}
             </TableBody>
           </Table>
