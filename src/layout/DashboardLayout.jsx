@@ -14,18 +14,18 @@ import Dashboard from "../pages/Dashboard";
 function DashboardLayout() {
   const location = useLocation();
   return (
-    <div className="relative w-full">
+    <div className=" w-full">
       {/* Top Nav */}
-      <div className="w-full h-16  px-5 flex justify-between  bg-white sticky top-0">
-        <div className=" h-full w-48 flex justify-center items-center">
+      <div className="w-full h-16  px-5 flex justify-between  bg-white sticky top-0 left-0 right-0 border">
+        <div className=" h-full  flex justify-center items-center">
           <img
             src="https://www.pngarts.com/files/3/Logo-PNG-Download-Image.png"
             alt="Logo"
-            className="w-14"
+            className="h-12"
           />
         </div>
         <div className="flex justify-end items-center ">
-          <div className=" h-full  flex justify-center items-center">
+          <div className="w-20 h-full flex justify-center items-center">
             <img
               src="https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png"
               alt="profile"
@@ -38,7 +38,7 @@ function DashboardLayout() {
       {/* Content */}
       <div className=" w-full flex flex-1 ">
         {/* SideNav */}
-        <div className="w-64 mr-5  h-full bg-white pt-10  sticky top-20">
+        <div className="w-64 mr-5  h-full bg-white pt-10  sticky top-20 hidden xl:flex">
           <ul className="w-full  ">
             <li className="w-full h-12 flex justify-center items-center cursor-pointer hover:bg-slate-100 rounded-r-full">
               <NavLink className="w-full flex justify-center h-full" to="/user">

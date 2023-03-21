@@ -2,7 +2,7 @@ import React from "react";
 
 function DashboardCard({ topic, Icon, price, currency }) {
   return (
-    <div className="w-1/4 border mx-5 h-52  bg-gray-800 rounded-md border-gray-50 ">
+    <div className=" w-full md:w-1/2 lg:w-1/4 border m-5 h-52  bg-gray-800 rounded-md border-gray-50 ">
       <div className="bg-green-300 h-10 w-10 flex justify-center items-center mx-5 my-5 rounded-full">
         <Icon />
       </div>

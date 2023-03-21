@@ -9,22 +9,22 @@ import { Link } from "react-router-dom";
 function Dashboard() {
   return (
     <div className="w-full">
-      <div className="w-full flex justify-between">
+      <div className="w-full flex flex-col md:flex-row  md:justify-between">
         <div className="">
           <h1 className="text-lg font-medium ">Hello Caleb! 👋</h1>
           <h6 className="text-xs ">
             We hope all is well and you have a great day.
           </h6>
         </div>
-        <div className="">
+        <div className="mt-5  md:mt-0">
           <span className="border px-3 py-2 mx-2 text-xs border-gray-600 cursor-pointer">
-            Send Money
+            Send&nbsp;Money
           </span>
           <Link
             to="bank"
             className="border px-3 py-2 mx-2 text-xs bg-green-300 cursor-pointer border-gray-600"
           >
-            Check Account
+            Check&nbsp;Account
           </Link>
         </div>
       </div>
@@ -34,7 +34,7 @@ function Dashboard() {
         <h1 className="text-lg font-normal">Status</h1>{" "}
         <span className="border-b w-5 mx-1 border-gray-500"></span>
       </div>
-      <div className="flex justify-center">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full">
         <DashboardCard
           topic="ACCOUNT BALANCE"
           Icon={AiFillCreditCard}
@@ -73,8 +73,10 @@ function Dashboard() {
           View All
         </Link>
       </div>
-      <div className="w-full mb-10 mx-5">
-        <TransactionTable />
+      <div className="w-full mb-10  flex justify-center items-center">
+        <div className="w-56 sm:w-96 md:w-full overflow-scroll overflow-x-scroll">
+          <TransactionTable />
+        </div>
       </div>
     </div>
   );
