@@ -41,7 +41,7 @@ function HomeLayout() {
       </div>
 
       <div className="sticky top-0 w-full h-10 md:h-16 bg-[#f5726b] flex flex-row justify-between  items-end md:px-5 border-b z-40">
-        <NavLink to="/" className="h-10 md:h-16 mx-5">
+        <NavLink to="/" className="h-6 md:h-10 mx-5">
           <img
             src="https://www.pngarts.com/files/3/Logo-PNG-Download-Image.png"
             alt="logo"
@@ -65,7 +65,7 @@ function HomeLayout() {
               }
               to="about"
             >
-              Who We Are
+              Who we are
             </NavLink>
           </li>
 
