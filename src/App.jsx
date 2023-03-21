@@ -10,6 +10,7 @@ import Vault from "./pages/Vault";
 import Transaction from "./pages/Transaction";
 import Setting from "./pages/Setting";
 import Support from "./pages/Support";
+import Career from "./pages/Career";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/career",
+        element: <Career />,
       },
     ],
   },

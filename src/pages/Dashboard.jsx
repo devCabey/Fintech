@@ -20,9 +20,12 @@ function Dashboard() {
           <span className="border px-3 py-2 mx-2 text-xs border-gray-600 cursor-pointer">
             Send Money
           </span>
-          <span className="border px-3 py-2 mx-2 text-xs bg-green-300 cursor-pointer border-gray-600">
+          <Link
+            to="bank"
+            className="border px-3 py-2 mx-2 text-xs bg-green-300 cursor-pointer border-gray-600"
+          >
             Check Account
-          </span>
+          </Link>
         </div>
       </div>
       <div className="w-full border border-gray-200 my-12 mx-5"></div>

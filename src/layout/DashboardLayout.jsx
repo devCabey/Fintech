@@ -25,17 +25,13 @@ function DashboardLayout() {
           />
         </div>
         <div className="flex justify-end items-center ">
-          <div className="border-l h-full w-16  flex justify-center items-center">
-            <span>
-              <TfiEmail className="h-5 w-5 text-gray-500" />
-            </span>
-          </div>
-          <div className="border-l h-full w-16  flex justify-center items-center">
+          <div className=" h-full  flex justify-center items-center">
             <img
               src="https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png"
               alt="profile"
-              className="w-7 h-7 rounded-full bg-cover "
+              className="w-9 h-9 rounded-full bg-cover "
             />
+            <span className="mx-5 text-sm cursor-pointer">Logout</span>
           </div>
         </div>
       </div>
